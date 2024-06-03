@@ -1237,11 +1237,6 @@ table {
   box-sizing: border-box;
 }
 
-:root {
-  --text-color: #1A162E;
-  --icon-color: brightness(0) saturate(100%) invert(6%) sepia(77%) saturate(1431%) hue-rotate(230deg) brightness(87%) contrast(92%);
-}
-
 html {
   font-size: 62.5%;
 }
@@ -1272,13 +1267,31 @@ button, input, textarea, select {
   filter: var(--icon-color);
 }
 
-.top-atc__btn, .top-atc__group, .top-atc, .navbar__link, .navbar__list, .top-bar {
+html {
+  --text-color: #1A162E;
+  --icon-color: brightness(0) saturate(100%) invert(6%) sepia(77%) saturate(1431%) hue-rotate(230deg) brightness(87%) contrast(92%);
+  --header-bg-color:#EEE;
+  --top-act-group-color:#fff;
+  --top-act-group-shadow:rgba(237, 237, 246, 0.20);
+  --top-act-group-separate: #EDEDF6;
+}
+
+html.dark {
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(87%) sepia(100%) saturate(1%) hue-rotate(269deg) brightness(109%) contrast(97%);
+  --header-bg-color:#171C28;
+  --top-act-group-color:#292E39;
+  --top-act-group-shadow:rgba(0, 0, 0, 0.20);
+  --top-act-group-separate: #EDEDF6;
+}
+
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
 }
 
 .header {
-  background: #EEE;
+  background: var(--header-bg-color);
 }
 
 .top-bar {
@@ -1302,35 +1315,35 @@ button, input, textarea, select {
   margin-top: 3px;
 }
 
-.top-atc {
+.top-act {
   gap: 20px;
 }
-.top-atc__group {
+.top-act__group {
   min-width: 50px;
   height: 50px;
   border-radius: 8px;
-  background: #FFF;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--top-act-group-color);
+  box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 }
-.top-atc__group--single .top-atc__btn {
+.top-act__group--single .top-act__btn {
   padding: 13px;
 }
-.top-atc__btn {
+.top-act__btn {
   gap: 10px;
   padding: 13px 20px;
   cursor: pointer;
 }
-.top-atc__title {
+.top-act__title {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
 }
-.top-atc__separate {
+.top-act__separate {
   width: 1px;
   height: 30px;
-  background: #EDEDF6;
+  background: var(--top-act-group-separate);
 }
-.top-atc__avatar {
+.top-act__avatar {
   display: block;
   width: 50px;
   height: 50px;
