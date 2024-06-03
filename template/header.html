@@ -1,45 +1,88 @@
-<div class="top-bar">
-    <!-- Logo -->
-    <div class="logo">
-        <img
-            src="./assets/icons/logo.svg"
-            alt="Grocerymart"
-            class="logo__img"
-        />
-        <h1 class="logo__title">grocerymart</h1>
-    </div>
+<div class="container">
+    <div class="top-bar">
+        <!-- Logo -->
+        <div class="logo">
+            <img
+                src="./assets/icons/logo.svg"
+                alt="Grocerymart"
+                class="logo__img"
+            />
+            <h1 class="logo__title">grocerymart</h1>
+        </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li>
-                <a href="" class="navbar__link">
-                    Departments
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li>
+                    <a href="" class="navbar__link">
+                        Departments
+                        <img
+                            src="./assets/icons/arrow-down.svg"
+                            alt="Departments"
+                            class="navbar__arrow"
+                    /></a>
+                </li>
+                <li>
+                    <a href="" class="navbar__link">
+                        Grocery
+                        <img
+                            src="./assets/icons/arrow-down.svg"
+                            alt="Grocery"
+                            class="navbar__arrow"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="navbar__link">
+                        Beauty
+                        <img
+                            src="./assets/icons/arrow-down.svg"
+                            alt="Beauty"
+                            class="navbar__arrow"
+                    /></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Action -->
+        <div class="top-atc">
+            <div class="top-atc__group top-atc__group--single">
+                <button class="top-atc__btn">
                     <img
-                        src="./assets/icons/arrow-down.svg"
-                        alt="Departments"
-                        class="navbar__arrow"
-                /></a>
-            </li>
-            <li>
-                <a href="" class="navbar__link">
-                    Grocery
-                    <img
-                        src="./assets/icons/arrow-down.svg"
-                        alt="Grocery"
-                        class="navbar__arrow"
+                        src="./assets/icons/search.svg"
+                        alt="Search"
+                        class="top-atc__icon"
                     />
-                </a>
-            </li>
-            <li>
-                <a href="" class="navbar__link">
-                    Beauty
+                </button>
+            </div>
+
+            <div class="top-atc__group">
+                <button class="top-atc__btn">
                     <img
-                        src="./assets/icons/arrow-down.svg"
-                        alt="Beauty"
-                        class="navbar__arrow"
-                /></a>
-            </li>
-        </ul>
-    </nav>
+                        src="./assets/icons/heart.svg"
+                        alt="Heart"
+                        class="top-atc__icon"
+                    />
+                    <span class="top-atc__title">03</span>
+                </button>
+                <div class="top-atc__separate"></div>
+                <button class="top-atc__btn">
+                    <img
+                        src="./assets/icons/buy.svg"
+                        alt="Buy"
+                        class="top-atc__icon"
+                    />
+                    <span class="top-atc__title">$65.42</span>
+                </button>
+            </div>
+
+            <div class="top-atc__user">
+                <img
+                    src="./assets/img/avatar.jpg"
+                    alt="Avatar"
+                    class="top-atc__avatar"
+                />
+            </div>
+        </div>
+    </div>
 </div>
