@@ -40,3 +40,43 @@
         margin-top: 8px;
     }
 }
+
+// Buttons
+.btn{
+    height: 46px;
+    padding: 0 20px; 
+    border-radius: 6px;
+
+    background: #F8F8FB;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    user-select: none;
+
+    +.btn{
+        margin: 0 20px;
+    }
+
+    &--text{
+        background: transparent;
+        color: #9E9DA8;
+        font-weight: 400;
+    }
+
+    &--primary{
+        background: #FFB700;
+    }
+
+    &--outline{
+        background: transparent;
+        border: 1px solid #D2D1D6;
+    }
+
+    &--rounded{
+        border-radius: 99px;
+    }
+
+    &:hover{
+        opacity: 0.9;
+    }
+}
