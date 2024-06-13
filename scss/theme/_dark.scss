@@ -50,7 +50,12 @@ html.dark{
     --filter-form-tag-bg: #171C28;
     --filter-form-arrow: var(--dropdown-arrow-color);
 
-    // Auth
-    --auth-content-bg: #292E39;
-    --auth-heading-color: #9E9DA8;
+     // Auth
+     --auth-content-bg: #292E39;
+     --auth-intro-bg: #171C28;
+     --auth-intro-text-color: #B9BABE;
+     --auth-content-heading-color: #B9BABE;
+
+     // Forms
+    --form-placeholder-color: #B9BABE;
 }
