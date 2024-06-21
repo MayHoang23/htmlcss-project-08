@@ -62,9 +62,19 @@ html{
 
     // Product detail
     --product-detail-bg: #fff;
+    --product-detail-info-bg: #F6F6F6;
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: #FAFAFD;
+        --product-detail-info-bg: #fff;
+    }
 
     // Breadcrumbs
     --breadcrumbs-bg: #F6F6F6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #fff;
+    }
 
 }
