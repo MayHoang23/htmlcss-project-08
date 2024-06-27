@@ -1435,6 +1435,8 @@ html {
   --search-bar-bg: #fff;
   --review-card-bg: #FAFAFD;
   --text-content-hr-bg: #ebebeb;
+  --checkout-info-bg: #FFF;
+  --checkout-info-shadow: rgba(237, 237, 246, 0.20);
 }
 @media (max-width: 991.98px) {
   html {
@@ -3554,6 +3556,111 @@ html.dark {
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 141.667%;
+}
+
+.checkout-page {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.checkout-page__breadcrumbs {
+  background: #fff;
+}
+
+.checkout-container {
+  margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .checkout-container {
+    margin-top: 20px;
+  }
+}
+
+.cart-info {
+  padding: 30px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.cart-info__list {
+  margin-top: -30px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #D2D1D6;
+}
+.cart-item__thumb {
+  width: 172px;
+  height: 172px;
+  object-fit: contain;
+}
+.cart-item__content {
+  flex: 1;
+  display: flex;
+  align-self: flex-start;
+}
+.cart-item__content-left {
+  flex: 1;
+}
+.cart-item__content-right {
+  display: flex;
+  flex-direction: column;
+}
+.cart-item__title {
+  max-width: 374px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.cart-item__price-wrap {
+  color: #9E9DA8;
+  margin: 16px 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.cart-item__status {
+  color: #67B044;
+}
+.cart-item__ctrl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto;
+  min-height: 44px;
+}
+.cart-item__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid #D2D1D6;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.cart-item__total-price {
+  text-align: right;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
+}
+.cart-item__ctrl-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9E9DA8;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.cart-item__ctrl-btn:first-child {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
