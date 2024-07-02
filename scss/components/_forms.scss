@@ -116,6 +116,7 @@ $error-color: #ed4337;
         position: absolute;
         bottom: 44px;
         left: 10px;
+        z-index: 1;
 
         display: flex;
         flex-direction: column;
@@ -126,33 +127,76 @@ $error-color: #ed4337;
         transition: opacity, visibility, translate;
         transition-duration: 0.2s;
 
-        background: #fff;
+        background: var(--form-select-dialog-bg);
 
         min-width: 230px;
         max-height: 310px;
-        padding: 10px 0;
+        padding-bottom: 10px;
         border: 1px solid #D2D1D6;
         border-radius: 10px;
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
 
         &.show{
             opacity: 1;
             visibility: visible;
             translate: 0;
         }
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            max-width: initial;
+            max-height: initial;
+            border-radius: 0;
+            inset: 0;
+
+        }
+    }
+
+    &__close-dialog{
+        font-size: 3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2px 18px;
+        opacity: 0.8;
     }
 
     &__search{
         display: flex;
         align-items: center;
+        flex-shrink: 0;
+        
+        padding: 0 20px;
+        height: 38px;
         border-bottom: 1px solid #D2D1D6;
-        padding: 0 20px 10px;
 
-        &__input{
+        &-input{
             flex: 1;
+            height: 100%;
+            font-size: 1.6rem;
         }
 
-        &__icon{
+        &-icon{
             width: 16px;
+            margin-left: 10px;
+        }
+
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: row-reverse;
+            margin-top: 30px;
+
+            &-icon{
+                margin-left: 0;
+            }
+
+            &-input{
+                padding-left: 10px;
+            }
+
         }
     }
 
@@ -160,6 +204,7 @@ $error-color: #ed4337;
         margin-top: 10px;
         flex: 1;
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     &__option{
@@ -168,12 +213,16 @@ $error-color: #ed4337;
 
         &--current{
             font-weight: 500;
-            background: rgba($color: #ffb700, $alpha: 0.5);
+            background: rgba($color: #ffb700, $alpha: 0.6);
         }
 
         &:not(&--current):hover{
-            background: #ebebeb;
+            background: var(--form-option-hover-bg) ;
             cursor: pointer;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 14px 20px;
         }
     }
 
