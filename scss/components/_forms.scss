@@ -153,7 +153,7 @@ $error-color: #ed4337;
     }
 
     &__dialog-heading{
-        padding: 14px;
+        padding: 20px;
         font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
@@ -164,7 +164,7 @@ $error-color: #ed4337;
         position: absolute;
         top: 0;
         right: 0;
-        padding: 2px 18px;
+        padding: 12px 18px;
         opacity: 0.8;
     }
 
@@ -189,11 +189,15 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(lg) {
-            height: 42px;
+            height: 48px;
+
+            &-icon{
+                width: 20px;
+            }
         }
 
         @include abstracts.screen(sm) {
-            margin: 10px 20px 0;
+            margin: 10px 30px 0;
             padding: 0 14px;
             border: 1px solid #D2D1D6;
             border-radius: 10px;
@@ -205,6 +209,10 @@ $error-color: #ed4337;
         flex: 1;
         overflow-y: auto;
         overscroll-behavior: contain;
+
+        @supports(-webkit-touch-callout: none){
+            padding-bottom: 300px;
+        }
     }
 
     &__option{
@@ -222,7 +230,8 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(lg) {
-            padding: 14px 20px;
+            padding: 18px 30px;
+            font-size: 1.6rem;
         }
     }
 
