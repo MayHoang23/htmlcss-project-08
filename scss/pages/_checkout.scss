@@ -32,6 +32,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 30px;
     }
     
     &__heading{
@@ -153,6 +154,11 @@
 
     &__form{
         margin-bottom: 30px;
+    }
+
+    &__form-row{
+        flex-direction: row;
+        gap: 20px;
     }
 }
 
@@ -431,12 +437,28 @@
     align-items: center;
     gap: 20px;
 
+    @include abstracts.screen(sm) {
+        align-items: flex-start;
+    }
+
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
-    background: var(--Background-2, #F6F6F6);
+    background: var(--checkout-payment-item-bg);
 
     &__content{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        gap: 20px;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__info{
         flex: 1;
     }
 
