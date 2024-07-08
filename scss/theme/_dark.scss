@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 html.dark{
-    --text-color: #fff;
+    --text-color: #e9e3e3;
     --icon-color: brightness(0) saturate(100%) invert(87%) sepia(100%) saturate(1%) hue-rotate(269deg) brightness(109%) contrast(97%);
 
 
@@ -13,6 +13,8 @@ html.dark{
     --top-act-group-color:#292E39;
     --top-act-group-shadow:rgba(0, 0, 0, 0.20);
     --top-act-group-separate: #EDEDF6;
+
+    --separate-bg: #292E39;
 
     @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.20);
@@ -106,4 +108,13 @@ html.dark{
      // Modal
     --modal-bg: #292E39;
     --modal-shadow: rgba(23, 28, 40, 0.40);
+
+    // Profile
+    --profile-sidebar-bg: #171C28;
+    --profile-sidebar-shadow: rgba(23, 28, 40, 0.20);
+    --profile-sidebar-link-hover: #292E39;
+
+    // Account info
+    --account-info-bg: #292E39;
+    --account-info-icon-bg: #171C28;
 }
