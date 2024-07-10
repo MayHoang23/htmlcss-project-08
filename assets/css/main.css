@@ -1631,8 +1631,13 @@ html.dark {
     margin-left: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     translate: -50% -50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .top-bar__logo {
+    left: 32%;
   }
 }
 
@@ -1990,9 +1995,17 @@ html.dark {
 .user-menu__link {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   justify-content: space-between;
   gap: 15px;
   padding: 12px 0;
+}
+@media (max-width: 767.98px) {
+  .user-menu__link {
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+  }
 }
 .user-menu__link:hover {
   color: #0071DC;
